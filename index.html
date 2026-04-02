@@ -206,6 +206,24 @@
     <meta http-equiv="etag" content="bug"/>
 
   <style> :root { --wix-ads-height: 0px !important; } #WIX_ADS { display: none !important; } </style>
+  <!-- Mobile Viewport Scaling -->
+  <script>
+    (function() {
+      var SITE_WIDTH = 980;
+      function updateViewport() {
+        var vw = window.innerWidth || document.documentElement.clientWidth || screen.width;
+        if (vw < SITE_WIDTH) {
+          var scale = (vw / SITE_WIDTH).toFixed(4);
+          var viewport = document.getElementById('wixDesktopViewport');
+          if (viewport) {
+            viewport.setAttribute('content', 'width=' + SITE_WIDTH + ', initial-scale=' + scale + ', maximum-scale=5');
+          }
+        }
+      }
+      updateViewport();
+      window.addEventListener('resize', updateViewport);
+    })();
+  </script>
 <!-- render-head end -->
 
 <style data-href="assets/css/a85.css">.aVng1S{border-top:var(--lnw,2px) solid rgba(var(--brd,var(--color_15,color_15)),var(--alpha-brd,1));box-sizing:border-box;height:0}</style>
@@ -604,7 +622,7 @@
 
 #comp-mmy3fyff .style-mn3e61k6__root:hover .StylableButton2545352419__icon{fill: #000000}
 
-@media screen and (min-width: 1px) and (max-width: 0px) {
+@media screen and (max-width: 768px) {
     #comp-mmy3fyff .style-mn3e61k6__root .StylableButton2545352419__label {
         font-size: 10px;
     }
@@ -890,7 +908,7 @@
 
 #comp-mmzj5akq5 .style-mn3hlctn__root:hover .StylableButton2545352419__icon{fill: #000000}
 
-@media screen and (min-width: 1px) and (max-width: 0px) {
+@media screen and (max-width: 768px) {
     #comp-mmzj5akq5 .style-mn3hlctn__root .StylableButton2545352419__label {
         font-size: 12px;
     }
@@ -919,7 +937,7 @@
 
 #comp-mmzj5akr3 .style-mn3hlko8__root:hover .StylableButton2545352419__icon{fill: #000000}
 
-@media screen and (min-width: 1px) and (max-width: 0px) {
+@media screen and (max-width: 768px) {
     #comp-mmzj5akr3 .style-mn3hlko8__root .StylableButton2545352419__label {
         font-size: 12px;
     }
@@ -948,7 +966,7 @@
 
 #comp-mn8ut5on .style-mn8ut5pb1__root:hover .StylableButton2545352419__icon{fill: #000000}
 
-@media screen and (min-width: 1px) and (max-width: 0px) {
+@media screen and (max-width: 768px) {
     #comp-mn8ut5on .style-mn8ut5pb1__root .StylableButton2545352419__label {
         font-size: 12px;
     }
@@ -977,7 +995,7 @@
 
 #comp-mmzg1zj613 .style-mn3htgsv__root:hover .StylableButton2545352419__icon{fill: #000000}
 
-@media screen and (min-width: 1px) and (max-width: 0px) {
+@media screen and (max-width: 768px) {
     #comp-mmzg1zj613 .style-mn3htgsv__root .StylableButton2545352419__label {
         font-size: 12px;
     }
@@ -1006,7 +1024,7 @@
 
 #comp-mmzg1zj74 .style-mn3htlqr__root:hover .StylableButton2545352419__icon{fill: #000000}
 
-@media screen and (min-width: 1px) and (max-width: 0px) {
+@media screen and (max-width: 768px) {
     #comp-mmzg1zj74 .style-mn3htlqr__root .StylableButton2545352419__label {
         font-size: 12px;
     }
